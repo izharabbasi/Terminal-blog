@@ -1,7 +1,8 @@
 from post import Post
+from database import Database
 
-post = Post('tiele1', 'this is content', 'izhar')
-post2 = Post('tiele2', 'this is different content', 'shery')
-post.author = "ahmed yar"
-print(post.author)
-print(post2.content)
+Database.inserting()
+
+post = Post(blog_id='123',title='hello worl', content='this is a new blog that i have been writing for months', author='izhar')
+
+post.save_to_mongo()
